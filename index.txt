@@ -1,6 +1,6 @@
 Tvflix
 
-34:50
+1:24:19
 
 Tvflix is a popular movie app made by ola.
 
@@ -139,3 +139,4 @@ All Fantasy Movies
 Results for
 
 Puss in Boots
+
