@@ -51,20 +51,21 @@ alt = the movie database logo
 // BANNER
 aria-label = popular movies
 
-alt = Puss in Boots: The Last Wish
+alt = DeadPool 3: DeadPool and Wolverine
 
-Puss in Boots: The Last Wish
+Come together
 
-2022
-7.5
+2024
+9.5
 
-Animation, Action, Adventure
+Action, Comedy, Science Fiction
 
-Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.
+A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.
+
 
 Watch Now
 
-alt = Slide to Puss in Boots: The Last Wish
+alt = Slide to DeadPool 3: DeadPool and Wolverine
 
 
 
@@ -72,7 +73,7 @@ alt = Slide to Puss in Boots: The Last Wish
 
 Upcoming Movies
 
-alt = Puss in Boots: The Last Wish
+alt = DeadPool 3: DeadPool and Wolverine
 
 alt = rating
 
@@ -80,29 +81,29 @@ alt = rating
 
 2022
 
-title = Puss in Boots: The Last Wish
+title = Deadpool & Wolverine (2024)
 
 
 
 #---------- DETAIL PAGE ----------#
 
-alt = Puss in Boots: The Last Wish
+alt = DeadPool 3: DeadPool and Wolverine
 
-Puss in Boots: The Last Wish
+DeadPool 3: DeadPool and Wolverine
 
 alt = rating
 
 8.4
 
-162m
+2h 8m
 
-2022
+2024
 
-PG-13
+R
 
-Animation, Action, Adventure
+Action, Comedy, Science Fiction
 
-Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.
+A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him. But when his homeworld faces an existential threat, Wade must reluctantly suit-up again with an even more reluctant Wolverine.
 
 Starring
 
@@ -116,15 +117,15 @@ Trailers and Clips
 
 You May Also Like
 
-alt = Puss in Boots: The Last Wish
+alt = DeadPool 3: DeadPool and Wolverine
 
 alt = rating
 
-8.4
+9.5
 
-2022
+2024
 
-title = Puss in Boots: The Last Wish
+title =  Deadpool & Wolverine (2024)
 
 
 
