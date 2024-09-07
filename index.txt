@@ -134,6 +134,8 @@ title =  Deadpool & Wolverine (2024)
 
 All Fantasy Movies
 
+btn = Load More
+
 
 
 #---------- SEARCH MODAL ----------#
