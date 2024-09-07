@@ -1,6 +1,6 @@
 Tvflix
 
-1:24:19
+1:49:29
 
 Tvflix is a popular movie app made by ola.
 
@@ -108,6 +108,7 @@ A listless Wade Wilson toils away in civilian life with his days as the morally 
 Starring
 
 Letitia Wright, Lupita Nyong'o, Danai Gurira, Winston Duke, Dominique Thorne, Tenoch Huerta Mejía, Angela Bassett, Florence Kasumba, Michaela Coel, Mabel Cadena
+
 
 Directed By
 
