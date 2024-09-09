@@ -762,6 +762,11 @@ body {
 /*-----------------------------------*\
   #MOVIE LIST PAGE
 \*-----------------------------------*/
+
+/* .genre-list {
+  display: none;
+} */
+
 .genre-list .title-wrapper {
   margin-block-end: 56px;
 }
