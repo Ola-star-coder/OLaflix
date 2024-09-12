@@ -554,6 +554,7 @@ body {
   height: calc(100vh - 96px);
   background-color: var(--surface);
   color: var(--on-surface);
+  overflow-y: overlay;
   z-index: 1;
 }
 

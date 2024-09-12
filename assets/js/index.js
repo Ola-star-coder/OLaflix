@@ -121,5 +121,5 @@ const heroBanner = function({ results: movieList }){
 
   pageContent.appendChild(banner); 
 
-//   addHeroSlide();
+  addHeroSlide();
 }
