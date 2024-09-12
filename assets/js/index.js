@@ -7,8 +7,8 @@ import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
 
 const pageContent = document.querySelector('.page-content');//changed queryselector
 
-
-sidebar();
+try {
+  sidebar();
 
 
     /**
@@ -121,5 +121,9 @@ const heroBanner = function({ results: movieList }){
 
   pageContent.appendChild(banner); 
 
-  addHeroSlide();
+  // addHeroSlide();
+}
+
+} catch (error) {
+  console.log('not defined');
 }
