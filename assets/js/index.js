@@ -17,12 +17,16 @@ sidebar();
 
 const homePageSections = [
   {
-    title: 'Upcoming Movies',
-    path: '/movie/upcoming'
+     title: "Today's Trending Movies", 
+    path:"/trending/movie/day"
   },
   {
-    title: "Today\'s Trending Movies", 
+     title: "This Week Trending Movies", 
     path:"/trending/movie/week"
+  },
+  {
+     title: 'Upcoming Movies',
+    path: '/movie/upcoming'
   },
   {
     title: "Top Rated Movies", 
