@@ -153,4 +153,32 @@ fetchDataFromServer(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${api
    }
 
    pageContent.appendChild(movieDetail);
+
+   fetchDataFromServer(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?page=1&api_key=${api_key}`, addSuggestedMovies);
 });
+
+
+const addSuggestedMovies = function({results: movieList}, title){
+
+  const movieListElem = document.createElement('section');
+  movieListElem.classList.add('movie-list');
+  movieListElem.ariaLabel = 'You May Also Like';
+
+  movieListElem.innerHTML = `
+    <div class="title-wrapper">
+     <h3 class="title-large">You May Also Like</h3>
+   </div>
+
+    <div class="slider-list">
+    <div class="slider-inner"></div>
+    </div>
+  `
+  for (const movie of movieList){
+
+    const movieCard = createMovieCard(movie);//called from movie card.js
+
+    movieListElem.querySelector('.slider-inner').appendChild(movieCard);
+  };
+
+  pageContent.appendChild(movieListElem);
+}
