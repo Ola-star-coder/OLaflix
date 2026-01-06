@@ -674,6 +674,13 @@ body {
   padding-block-start: 32px;
 }
 
+.empty-bookmarks {
+  color: var(--text-color);
+  text-align: center;
+  margin-block: 32px;
+  font-size: 1.6rem;
+}
+
 .movie-card {
   position: relative;
   min-width: 200px;
@@ -699,6 +706,38 @@ body {
   position: absolute;
   inset: 0;
 }
+
+/* Bookmark button */
+.movie-card .bookmark-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: var(--white);
+  padding: 6px 10px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  backdrop-filter: blur(4px);
+}
+
+.movie-card .bookmark-btn svg {
+  display: block;
+  width: 20px;
+  height: 26px;
+}
+
+.movie-card .bookmark-btn .bookmark-text {
+  font-size: 1.3rem;
+}
+
+.movie-card .bookmark-btn.bookmarked {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 
 
 /*-----------------------------------*\

@@ -5,9 +5,10 @@ import { createMovieCard } from "./movie-card.js";
 import { sidebar } from "./sidebar.js";
 import { search } from "./search.js";
 
-//collect genreName and url params from local storage
+// collect genreName and url params from local storage
 const genreName = window.localStorage.getItem('genreName');
 const urlParam = window.localStorage.getItem('urlParam');
+
 const pageContent = document.querySelector('.page-content');
 
 sidebar();
@@ -15,8 +16,34 @@ sidebar();
 let currentPage = 1;
 let totalPages = 0;
 
+// Bookmarks
+if (urlParam === '__BOOKMARKS__') {
+  const bookmarks = JSON.parse(localStorage.getItem('bookmarks') || '[]');
 
-fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&page=${currentPage}&include_adult=false&sort_by=popularity.desc&api_key=${api_key}`, function ( {results: movieList, total_pages}){
+  document.title = `${genreName || 'Bookmarks'} - Tvflix`;
+
+  const movieListElem = document.createElement('section');
+  movieListElem.classList.add('movie-list', 'genre-list');
+  movieListElem.ariaLabel = `${genreName || 'Bookmarks'}`;
+  movieListElem.innerHTML = `
+    <div class="title-wrapper">
+      <h1 class="heading">${genreName || 'Bookmarks'}</h1>
+    </div>
+
+    <div class="grid-list"></div>
+  `;
+
+  for (const movie of bookmarks){
+    const movieCard = createMovieCard(movie);
+    movieListElem.querySelector('.grid-list').appendChild(movieCard);
+  }
+
+  pageContent.appendChild(movieListElem);
+
+  search();
+
+} else {
+  fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&page=${currentPage}&include_adult=false&sort_by=popularity.desc&api_key=${api_key}`, function ( {results: movieList, total_pages}){
    
     totalPages = total_pages;
 
@@ -26,7 +53,6 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&pag
 
     movieListElem.classList.add('movie-list', 'genre-list');
     movieListElem.ariaLabel = `${genreName} Movies`;
-    //MovieList inner html added in javascript
     movieListElem.innerHTML = `
     <div class="title-wrapper">
     <h1 class="heading">All ${genreName} Movies</h1>
@@ -36,8 +62,6 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&pag
 
     <button class="btn load-more" load-more>Load More</button>
     `;
-
-    //add movie card based on fetch item
 
     for (const movie of movieList){
         const movieCard = createMovieCard(movie);
@@ -52,15 +76,15 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&pag
     document.querySelector('[load-more]').addEventListener('click', function(){
      
      if (currentPage >= totalPages){
-        this.style.display = 'none';//equals to loading btn
+        this.style.display = 'none';
         return;
      }
 
      currentPage++;
-     this.classList.add('loading');//equals to loading btn
+     this.classList.add('loading');
      
      fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&page=${currentPage}&include_adult=false&sort_by=popularity.desc&api_key=${api_key}`, ({results: movieList}) => {
-      this.classList.remove('loading');//this = loading btn
+      this.classList.remove('loading');
 
       for (const movie of movieList){
         const movieCard = createMovieCard(movie);
@@ -73,7 +97,7 @@ fetchDataFromServer(`https://api.themoviedb.org/3/discover/movie?${urlParam}&pag
     });
 
 
-});
+  });
 
-
-search();
+  search();
+}

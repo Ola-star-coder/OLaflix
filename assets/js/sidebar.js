@@ -42,6 +42,15 @@ export function sidebar (){
     
     </div>
 
+    <div class="sidebar-list">
+    
+      <p class="title">Libraries</p>
+    
+      <a href="./movie-list.html" menu-close class="sidebar-link" onclick="showBookmarks()">Bookmarks</a>
+    
+    </div>
+
+
     <div class="sidebar-footer">
       <p class="copyright">copyright 2024 <a href="https://github.com/Ola-star-coder/OLaflix">Github repo</a></p>
 
